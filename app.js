@@ -1,16 +1,16 @@
-const taskInput = document.getElementById('new-task'); 
-const addButton = document.getElementsByTagName('button')[0]; 
-const incompleteTaskHolder = document.getElementById('incompleteTasks'); 
-const completedTasksHolder = document.getElementById('completed-tasks'); 
+const taskInput = document.getElementById('new-task');
+const addButton = document.getElementsByTagName('button')[0];
+const incompleteTaskHolder = document.getElementById('incompleteTasks');
+const completedTasksHolder = document.getElementById('completed-tasks');
 
 const createNewTaskElement = function (taskString) {
 	const listItem = document.createElement('li');
-	const checkBox = document.createElement('input'); 
-	const label = document.createElement('label'); 
-	const editInput = document.createElement('input'); 
-	const editButton = document.createElement('button'); 
+	const checkBox = document.createElement('input');
+	const label = document.createElement('label');
+	const editInput = document.createElement('input');
+	const editButton = document.createElement('button');
 	const deleteButton = document.createElement('button');
-	const deleteButtonImg = document.createElement('img'); 
+	const deleteButtonImg = document.createElement('img');
 
 	label.innerText = taskString;
 	label.className = 'task';
@@ -51,7 +51,7 @@ const editTask = function () {
 	const label = listItem.querySelector('label');
 	const editBtn = listItem.querySelector('.edit');
 	const containsClass = listItem.classList.contains('editMode');
-	
+
 	if (containsClass) {
 		label.innerText = editInput.value;
 		editBtn.innerText = 'Edit';
