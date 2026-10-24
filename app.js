@@ -74,14 +74,13 @@ const changeTaskStatus = function () {
 	const listItem = this.parentNode;
 	const tasksListNode = listItem.parentNode;
 
-	if (tasksListNode === null || tasksListNode.id === 'incompleteTasks') {
+	if (tasksListNode === null || tasksListNode === incompleteTaskHolder) {
 		completedTasksHolder.appendChild(listItem);
 	} else {
 		incompleteTaskHolder.appendChild(listItem);
 	}
 };
 
-addButton.onclick = addTask;
 addButton.addEventListener('click', addTask);
 
 const bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
